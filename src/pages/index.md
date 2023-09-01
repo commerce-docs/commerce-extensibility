@@ -1,6 +1,6 @@
 ---
 title: Adobe Commerce Extensibility
-description: See an overview of the latest extensibility technology for Adobe Commerce development.
+description: 
 keywords:
   - Extensibility
 ---
