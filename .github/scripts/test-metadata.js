@@ -5,7 +5,7 @@
 
 module.exports = testMetadata
 
-const glob = require('glob')
+const {glob} = require("glob")
 const markdownFiles = glob('**/*.md', {ignore: 'node_modules/**'})
 
 console.log('\x1b[35m ==== FRONTMATTER REPORT - STARTING ==================== \x1b[0m');
