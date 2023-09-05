@@ -5,11 +5,11 @@
 
 module.exports = testMetadata;
 
-const markdownFiles = require("./src/pages");
+const markdownFiles = require("../../src/pages");
 
-  console.log('\x1b[35m ==== FRONTMATTER REPORT - STARTING ==================== \x1b[0m');
-  console.info('\x1b[36m [cmd + click] on the file path to open \x1b[0m');
-
+console.log('\x1b[35m ==== FRONTMATTER REPORT - STARTING ==================== \x1b[0m');
+console.info('\x1b[36m [cmd + click] on the file path to open \x1b[0m');
+  
   function testMetadata(){
     markdownFiles.forEach(file => {
         if (!file.description || !file.keywords || !file.title) {
