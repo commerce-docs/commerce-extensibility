@@ -5,15 +5,15 @@
 
 module.exports = testMetadata;
 
-var glob = require('glob')
-  , path = require('path');
+const glob = require('glob')
+const path = 'src/pages'
+const markdownFiles = glob(path + '/**/*.md')
 
 console.log('\x1b[35m ==== FRONTMATTER REPORT - STARTING ==================== \x1b[0m');
 console.info('\x1b[36m [cmd + click] on the file path to open \x1b[0m');
   
   function testMetadata(){
-    glob.sync('./src/pages/**/*.md').forEach(file => {
-        require(path.resolve(file));
+    markdownFiles.forEach(file => {
         if (!file.description || !file.keywords || !file.title) {
           console.log('\n\x1b[41mFail\x1b[0m - ' + file.fileAbsolutePath + ': ');
           if (!file.title) console.error('\x1b[33m\tMissing Title \x1b[0m');
