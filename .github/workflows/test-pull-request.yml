@@ -80,6 +80,13 @@ jobs:
         with:
           cmd: test:links
 
+      - name: Check metadata
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const script = require('./.github/scripts/test-metadata.js');
+            script({ markdownFiles });
+
       - name: Build site
         id: build_site
         if: ${{ success() }}
