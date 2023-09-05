@@ -8,13 +8,11 @@ module.exports = testMetadata;
 var glob = require('glob')
   , path = require('path');
 
-glob.sync('./src/pages/**/*.md').forEach
-
 console.log('\x1b[35m ==== FRONTMATTER REPORT - STARTING ==================== \x1b[0m');
 console.info('\x1b[36m [cmd + click] on the file path to open \x1b[0m');
   
   function testMetadata(){
-    glob.forEach(file => {
+    glob.sync('./src/pages/**/*.md').forEach(file => {
         require(path.resolve(file));
         if (!file.description || !file.keywords || !file.title) {
           console.log('\n\x1b[41mFail\x1b[0m - ' + file.fileAbsolutePath + ': ');
