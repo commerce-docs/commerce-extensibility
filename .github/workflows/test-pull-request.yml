@@ -76,11 +76,9 @@ jobs:
           cmd: install
 
       - name: Check metadata
-        uses: actions/github-script@v6
+        uses: borales/actions-yarn@v3
         with:
-          script: |
-            const script = require('./.github/scripts/test-metadata.js');
-            script({ testMetadata });
+          cmd: test:metadata
 
       - name: Check internal links
         uses: borales/actions-yarn@v3
