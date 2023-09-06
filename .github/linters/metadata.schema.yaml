@@ -1,0 +1,11 @@
+properties:
+  title:
+    type: string
+    maxLength: 60
+  description:
+    type: string
+    maxLength: 160
+
+required:
+  - title
+  - description
