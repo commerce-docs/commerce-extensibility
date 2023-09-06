@@ -5,6 +5,27 @@ properties:
   description:
     type: string
     maxLength: 160
+  keywords:
+    type: array
+    items:
+      type: string
+      enum:
+        - API Mesh
+        - App Builder
+        - B2B
+        - Cache
+        - Cloud
+        - Configuration
+        - Cron
+        - Events
+        - Extensibility
+        - GraphQL
+        - null
+        - Performance
+        - REST
+        - Security
+        - Tools
+        - Upgrade
 
 required:
   - title
